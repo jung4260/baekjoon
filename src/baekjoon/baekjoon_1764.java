@@ -20,24 +20,24 @@ public class baekjoon_1764 {
 		int n = Integer.parseInt( input[0] );
 		int m = Integer.parseInt( input[1] );
 		
-		HashSet<String> firstList = new HashSet<>();
-		ArrayList<String> secondList = new ArrayList<>();
+		HashSet<String> hashList = new HashSet<>();
+		ArrayList<String> arrayList = new ArrayList<>();
 		
 		for(int i=0; i<n; i++) {
-			firstList.add(br.readLine());
+			hashList.add(br.readLine());
 		}
 		
 		for(int i=0; i<m; i++) {
 			String cumulative = br.readLine();
-			if( firstList.contains( cumulative )) {
-				secondList.add(cumulative);
+			if( hashList.contains( cumulative )) {
+				arrayList.add(cumulative);
 			};
 		}
 		
-		Collections.sort(secondList);
+		Collections.sort(arrayList);
 		
-		System.out.println(secondList.size());
-		for(String name : secondList) {
+		System.out.println(arrayList.size());
+		for(String name : arrayList) {
 			System.out.println(name);
 		}
 	}
